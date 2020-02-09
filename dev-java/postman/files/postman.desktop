@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Postman
+Exec=/opt/postman/Postman
+Icon=/opt/postman/app/resources/app/assets/icon.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Development;GTK;GNOME;
