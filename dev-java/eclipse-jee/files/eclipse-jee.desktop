@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=eclipse-jee
+Exec=/usr/bin/eclipse-jee
+Terminal=false
+Icon=/opt/apache/eclipse-jee/icon.xpm
+Type=Application
+Categories=Development

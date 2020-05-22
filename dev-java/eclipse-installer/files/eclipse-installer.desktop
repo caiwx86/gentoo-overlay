@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=eclipse-installer
+Exec=/usr/bin/eclipse-installer
+Terminal=false
+Icon=/opt/apache/eclipse-installer/icon.xpm
+Type=Application
+Categories=Development

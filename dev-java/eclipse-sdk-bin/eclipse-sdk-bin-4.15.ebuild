@@ -2,9 +2,10 @@
 
 EAPI=7
 
-DESCRIPTION="postman"
+DESCRIPTION="spring-tool-suite"
 HOMEPAGE="https://www.getpostman.com/"
-SRC_URI="https://dl.pstmn.io/download/latest/linux64" > Postman-linux-x64-${PV}.tar.gz
+EN="eclipse"
+SRC_URI="https://mirrors.tuna.tsinghua.edu.cn/${EN}/${EN}/downloads/drops4/S-${PV}M1-202001100905/${EN}-SDK-${PV}M1-linux-gtk-x86_64.tar.gz ->  ${P}.tar.gz"
 
 LICENSE="EULA"
 SLOT="0"
@@ -22,16 +23,17 @@ src_unpack() {
 	if [ "${A}" != "" ]; then
 		unpack ${A}
 	fi
-	S=${WORKDIR}/bin/${P}/
+	S=${WORKDIR}/${EN}/
 }
 
 src_install() {
-	insinto /opt/${PN}
+    PP="/opt/apache/${PN}"
+	insinto ${PP}
 	doins -r ${S}/*
-	dosym /opt/${PN}/Postman /usr/bin/Postman
-	fperms 0755 /opt/${PN}/Postman
+	dosym ${PP}/${EN} /usr/bin/${PN}
+	fperms 0755 ${PP}/${EN}
 	insinto /usr/share/applications/
-	doins ${FILESDIR}/postman.desktop
+	doins ${FILESDIR}/${EN}.desktop
 }
 
 pkg_postinst() {

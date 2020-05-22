@@ -2,9 +2,9 @@
 
 EAPI=7
 
-DESCRIPTION="markdown editor"
-HOMEPAGE="https://typora.io"
-SRC_URI="https://typora.io/linux/Typora-linux-x64.tar.gz"
+DESCRIPTION="postman"
+HOMEPAGE="https://www.getpostman.com/"
+SRC_URI="https://dl.pstmn.io/download/latest/linux64 -> Postman-linux-x64-${PV}.tar.gz"
 
 LICENSE="EULA"
 SLOT="0"
@@ -15,7 +15,6 @@ RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="
-	x11-libs/libXScrnSaver
 	${DEPEND}"
 BDEPEND=""
 
@@ -23,17 +22,17 @@ src_unpack() {
 	if [ "${A}" != "" ]; then
 		unpack ${A}
 	fi
-	S=${WORKDIR}/bin/Typora-linux-x64/
+	S=${WORKDIR}/Postman/
 }
 
 src_install() {
-	insinto /opt/typora
+	insinto /opt/${PN}
 	doins -r ${S}/*
-	dosym /opt/${PN}/Typora /usr/bin/${PN}
-	fperms 0755 /opt/${PN}/Typora
-	fperms 4755 /opt/${PN}/chrome-sandbox
+	dosym /opt/${PN}/Postman /usr/bin/postman
+	fperms 0755 /opt/${PN}/Postman
+	fperms 0755 /opt/${PN}/app/_Postman
 	insinto /usr/share/applications/
-	doins ${FILESDIR}/Typora.desktop
+	doins ${FILESDIR}/postman.desktop
 }
 
 pkg_postinst() {

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=spring-tool-suite4
+Exec=/usr/bin/springToolSuite4
+Terminal=false
+Icon=/opt/spring-tool-suite/icon.xpm
+Type=Application
+Categories=Development
