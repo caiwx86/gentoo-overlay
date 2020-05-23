@@ -30,6 +30,7 @@ src_install() {
     insinto /opt
     doins -r "${S}"/opt/*
     fperms 0755  /opt/${E}/${EN}
+	fperms +x  /opt/${E}/libexec/QtWebEngineProcess
 	dosym /opt/${E}/${EN} /usr/bin/${PN}
 
 	insinto ${AP}
