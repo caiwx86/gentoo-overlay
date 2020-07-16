@@ -8,12 +8,12 @@ DESCRIPTION="WPS Office is an office productivity suite"
 HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
 
 KEYWORDS="amd64"
-
-EN="EdrawMax"
-E="${EN}-9"
+EN="MindMaster"
+E="${EN}-8"
+AP="/opt/${E}"
 
 SRC_URI="
-	amd64? ( https://www.edrawsoft.cn/2download/${P}-amd64-cn.deb
+	amd64? ( https://www.edrawsoft.cn/2download/x86_64/${PN}_${PV}_cn_x86_64.deb 
 	)"
 
 SLOT="0"
@@ -25,14 +25,15 @@ DEPEND=""
 BDEPEND=""
 
 S="${WORKDIR}"
-AP="/usr/share/applications"
+UP="/usr/share/applications"
 src_install() {
-    insinto /opt/${E}
+    insinto ${AP}
     doins -r "${S}"/opt/${E}/*
-    fperms 0755  /opt/${E}/${EN}
-	dosym /opt/${E}/${EN} /usr/bin/${PN}
+    fperms 0755  ${AP}/${EN}
+	fperms +x  ${AP}/libexec/QtWebEngineProcess
+	dosym ${AP}/${EN} /usr/bin/${PN}
 
-	insinto ${AP}
-	doins -r "${S}"/${AP}/*
+	insinto ${UP}
+	doins -r "${S}"/${UP}/*
     
 }                                         

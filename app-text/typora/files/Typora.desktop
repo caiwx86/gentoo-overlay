@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Typora
+GenericName=Markdown editor
+Comment=Markdown editor
+Categories=Office;Utility;TextEditor;
+Exec=typora %u
+TryExec=Typora
+Icon=/opt/typora/resources/app/asserts/icon/icon_128x128.png
+StartupWMClass=Typora
+MimeType=text/md;text/markdown;application/md;
+StartupNotify=true

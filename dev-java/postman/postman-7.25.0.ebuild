@@ -7,7 +7,7 @@ HOMEPAGE="https://www.getpostman.com/"
 SRC_URI="https://dl.pstmn.io/download/latest/linux64 -> Postman-linux-x64-${PV}.tar.gz"
 
 AP="/opt/dev-java/${PN}"
-LICENSE="EULA"
+#LICENSE="EULA"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
