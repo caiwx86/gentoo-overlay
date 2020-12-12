@@ -9,11 +9,11 @@ HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
 
 KEYWORDS="amd64"
 EN="MindMaster"
-E="${EN}-${PV}"
+E="${EN}-8"
 AP="/opt/${E}"
 
 SRC_URI="
-	amd64? ( https://www.edrawsoft.cn/2download/x86_64/${P}-cn-amd64.deb
+	amd64? ( https://www.edrawsoft.cn/2download/x86_64/${PN}_${PV}_cn.x86_64.deb
 	)"
 
 SLOT="0"

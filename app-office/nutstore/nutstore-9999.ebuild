@@ -8,13 +8,12 @@ DESCRIPTION="WPS Office is an office productivity suite"
 HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
 
 KEYWORDS="amd64"
-EN="MindMaster"
-E="${EN}-8"
-AP="/opt/${E}"
-
+EN="nutstore"
+E="${EN}/dist"
+AP="/home/cwx/.${E}"
 SRC_URI="
-	amd64? ( https://www.edrawsoft.cn/2download/x86_64/${PN}_${PV}_cn_x86_64.deb 
-	)"
+       amd64? ( https://www.jianguoyun.com/static/exe/installer/nutstore_linux_dist_x64.tar.gz
+	   )"
 
 SLOT="0"
 IUSE=""
@@ -28,12 +27,6 @@ S="${WORKDIR}"
 UP="/usr/share/applications"
 src_install() {
     insinto ${AP}
-    doins -r "${S}"/opt/${E}/*
-    fperms 0755  ${AP}/${EN}
-	fperms +x  ${AP}/libexec/QtWebEngineProcess
-	dosym ${AP}/${EN} /usr/bin/${PN}
-
-	insinto ${UP}
-	doins -r "${S}"/${UP}/*
-    
+    doins -r "${S}"/*
+	fperms +x -R ${AP}
 }                                         
