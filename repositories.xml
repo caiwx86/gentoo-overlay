@@ -2,14 +2,15 @@
 <!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name><![CDATA[caiwx86]]></name>
-    <description lang="en"><![CDATA[caiwx86]]></description>
+    <name>caiwx86</name>
+    <description lang="en">caiwx86's gentoo-overlay</description>
     <homepage>http://github.com/caiwx86/gentoo-overlay</homepage>
     <owner type="person">
       <email>caiwenxiu0806@163.com</email>
       <name><![CDATA[Stefan Langenmaier]]></name>
     </owner>
     <source type="git">git://github.com/caiwx86/gentoo-overlay.git</source>
-    <feed>http://github.com/github.com/caiwx86/gentoo-overlay/commits/master.atom</feed>
+    <source type="git">https://github.com/caiwx86/gentoo-overlay.git</source>
+    <feed>https://github.com/github.com/caiwx86/gentoo-overlay/commits/master.atom</feed>
   </repo>
 </repositories>
