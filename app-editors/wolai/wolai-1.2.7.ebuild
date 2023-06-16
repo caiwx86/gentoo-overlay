@@ -12,7 +12,7 @@ HOMEPAGE="https://www.wolai.com"
 KEYWORDS="amd64"
 
 SRC_URI="
-	amd64? ( hhttps://cdn.wostatic.cn/dist/installers/wolai_1.2.7_amd64.deb?spm=wolai.home.0.0.1a99767bgEtGFI&file=${PN}_${PV}_amd64.deb
+	amd64? ( https://cdn.wostatic.cn/dist/installers/wolai_1.2.7_amd64.deb?spm=wolai.home.0.0.1a99767bgEtGFI&file=${PN}_${PV}_amd64.deb
 	)"
 
 SLOT="0"
@@ -27,4 +27,9 @@ BDEPEND=""
 S="${WORKDIR}"
 
 src_install() {
+    insinto /opt/${PN}
+	doins -r "${S}"/opt/${PN}/*
+	fperms +x /opt/${PN}/${PN}
+	insinto /usr
+    doins -r "${S}"/usr/*
 }
