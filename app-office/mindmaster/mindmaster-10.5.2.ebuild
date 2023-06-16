@@ -1,25 +1,26 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 inherit unpacker xdg
 
-DESCRIPTION="WPS Office is an office productivity suite"
-HOMEPAGE="http://www.wps.cn/product/wpslinux/ http://wps-community.org/"
+DESCRIPTION="Mindmaster"
+HOMEPAGE="https://www.edrawsoft.cn/download/mindmaster/"
 
 KEYWORDS="amd64"
 EN="MindMaster"
-E="${EN}-8"
+E="${EN}-10"
 AP="/opt/${E}"
 
 SRC_URI="
-	amd64? ( https://www.edrawsoft.cn/2download/x86_64/${PN}_${PV}_cn.x86_64.deb
+	amd64? ( https://cc-download.edrawsoft.cn/${PN}_cn_full5420.deb
 	)"
 
 SLOT="0"
 IUSE=""
 
 RDEPEND="
+    virtual/krb5
 "
 DEPEND=""
 BDEPEND=""
